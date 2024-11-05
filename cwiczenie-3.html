@@ -22,7 +22,33 @@
 		function ktora_cwiartka()
 		{
 			
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+
+			var wynik = document.getElementById("wynik");
 			
+			if(x == 0 || y == 0){
+				wynik.innerHTML = `<p>Punkt leży na jednej z osi układu</p>`;
+			};
+			if(x == 0 && y == 0){
+				wynik.innerHTML = `<p>Punkt P(0,0) jest początkiem układu współrzędnych</p>`;
+			};
+			if(x > 0 && y > 0){
+				wynik.innerHTML = `<p>Punkt o podanych współrzędnych leży w pierwszej ćwiartce kartezyjskiego układu współrzędnych</p>`;
+			};
+			if(x < 0 && y > 0){
+				wynik.innerHTML = `<p>Punkt o podanych współrzędnych leży w drugiej ćwiartce kartezyjskiego układu współrzędnych</p>`;
+			};
+			if(x < 0 && y < 0){
+				wynik.innerHTML = `<p>Punkt o podanych współrzędnych leży w trzeciej ćwiartce kartezyjskiego układu współrzędnych</p>`;
+			};
+			if(x > 0 && y < 0){
+				wynik.innerHTML = `<p>Punkt o podanych współrzędnych leży w czwartej ćwiartce kartezyjskiego układu współrzędnych</p>`;
+			};
+			if(x == 15 && y == 96){
+				wynik.innerHTML = `<p>René Descartes urodził się 31 marca 1596 w La Haye en Touraine, której to miejscowości w 1967 nadano na jego cześć nazwę Descartes. Pochodził ze starego szlacheckiego rodu. Był synem Joachima[w innych językach] prawnika i urzędnika miejskiego, oraz Jeanne z d. Brochard.Około 1607 Kartezjusz rozpoczął naukę w kolegium prowadzonym przez jezuitów w La Flèche (Collège Henri IV). W kolegium przebywał prawdopodobnie do 1615. Później naukę kontynuował w Paryżu i w 1616 uzyskał stopień z prawa cywilnego i kanonicznego na Uniwersytecie w Poitiers. W wieku 21 lat zaciągnął się do sprzymierzonej z Francją armii holenderskiej. Poznał tam Isaaca Beeckmana, który przedstawił mu wiele nowych teorii matematycznych. W 1621 porzucił służbę wojskową i powrócił do Paryża, gdzie skierował swe zainteresowania ku naukom matematycznym i fizycznym. Rozpoczął również prace nad traktatem poświęconym metodologii nauk. W 1643 Uniwersytet w Utrechcie potępił tezy Kartezjusza, zakazując ich nauczania. W 1649 filozof przyjął zaproszenie szwedzkiej królowej Krystyny do Sztokholmu, która chciała pod jego kierunkiem studiować filozofię i skorzystać z jego rad przy organizowaniu szwedzkiej akademii nauk. By zachować trzeźwość i czystość umysłu, królowa wyznaczyła mu godzinę swoich korepetycji na piątą rano. Filozof przeziębił się, w wyniku czego rozwinęło się zapalenie płuc. Kartezjusz odmawiał początkowo leczenia, zgadzając się na pomoc dopiero po kilku dniach. Zmarł 11 lutego 1650. Pochowano go w Sztokholmie. W 1667 ciało ekshumowano i pochowano w paryskim opactwie Saint-Germain-des-Prés. W 1817 roku szczątki przeniesiono do osobnej kaplicy opactwa. Czaszka Kartezjusza znajduje się w Muzeum Człowieka (nie jest eksponowana).</p>`;
+			}
+
 		}
 
 	</script>

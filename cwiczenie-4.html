@@ -26,8 +26,40 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
+
+			var wynik = document.getElementById("wynik");
 			
-			
+			if(a < b && a < c){
+				wynik.innerHTML += `<p>Najmniejsza z wprowadzonych liczb to liczba a: `+a+`</p>`;
+			}else if(b < a && b < c){
+				wynik.innerHTML += `<p>Najmniejsza z wprowadzonych liczb to liczba b: `+b+`</p>`;
+			}else if(c < a && c < b){
+				wynik.innerHTML += `<p>Najmniejsza z wprowadzonych liczb to liczba c: `+c+`</p>`;
+			};
+
+			if(a > b && a > c){
+				wynik.innerHTML += `<p>Największa z wprowadzonych liczb to liczba a: `+a+`</p>`;
+			}else if(b > a && b > c){
+				wynik.innerHTML += `<p>Największa z wprowadzonych liczb to liczba b: `+b+`</p>`;
+			}else if(c > a && c > b){
+				wynik.innerHTML += `<p>Największa z wprowadzonych liczb to liczba c: `+c+`</p>`;
+			};
+
+			var aAbs = Math.abs(a);
+			var bAbs = Math.abs(b);
+			var cAbs = Math.abs(c);
+
+			wynik.innerHTML += `<p>Wartości bezwzględne liczb to: a: `+aAbs+`, b: `+bAbs+`, c: `+cAbs+`</p>`;
+
+			if(a%2 == 0) wynik.innerHTML += `<p>liczba a jest parzysta</p>`;
+			else wynik.innerHTML += `<p>liczba a jest nieparzysta</p>`;
+
+			if(b%2 == 0) wynik.innerHTML += `<p>liczba b jest parzysta</p>`;
+			else wynik.innerHTML += `<p>liczba b jest nieparzysta</p>`;
+
+			if(c%2 == 0) wynik.innerHTML += `liczba c jest parzysta</p>`;
+			else wynik.innerHTML += `<p>liczba c jest nieparzysta</p>`;
+
 		}
 
 	</script>

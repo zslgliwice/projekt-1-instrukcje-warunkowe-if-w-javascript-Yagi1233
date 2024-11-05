@@ -23,6 +23,21 @@
 		function sprawdz()
 		{
 			
+			var imie = document.getElementById("imie").value;
+			var wiek = document.getElementById("wiek").value;
+			var wynik = document.getElementById("wynik");
+
+			if(wiek < 16){
+				wynik.innerHTML = `<p>Nie możesz wziąć udziału w seansie</p>`;
+			}else if(wiek == 16 || wiek == 17){
+				wynik.innerHTML = `<p>Możesz wziąć udział w seansie, jeśli jesteś z opiekunem</p>`;
+			}else if(wiek >= 18){
+				if(imie == "Brad" || imie == "Morgan"){
+					wynik.innerHTML = `<p>Możesz wziąć udział w seansie za darmo</p>`;
+				}else{
+					wynik.innerHTML = `<p>Możesz wziąć udział w seansie</p>`;
+				}
+			}
 			
 		}
 
